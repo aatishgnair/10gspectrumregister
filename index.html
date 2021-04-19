@@ -11,86 +11,40 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <style>
-    html, body {
-      overflow-x: hidden;
-
-    }
-    body {
-      position: relative
-    }
-    img {
-    max-width: NNNpx;
-    }
-  
-    </style>
-
 </head>
 <body>
-    <section class="bg-info" style="height: 70px; width: 100%;">
-        <img src="images\logo o.png" alt="">
-    </section>
-    <section class="bg-info" style="padding-bottom: 7em;"  >
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfLCSTTq6BKAsDTHAcvu0lytRQd0x-Xt2wjqdnWK2k0u4wxZQ/formResponse"
-        target="_self"
-        id="bootstrapForm"
-        method="POST">
-      <fieldset >
-          <h2 class="text-white" style=" padding-left: 6em; padding-top: 8em;" >LOGIN<br><small></small></h2>
-      </fieldset>
-  
-  
-      <!-- Field type: "short" id: "1253314805" -->
-      <fieldset>
-          <legend for="1253314805" class="text-white">Username</legend>
-          <div class="form-group">
-              <input id="2103109229" type="text" name="entry.2103109229" class="form-control" required>
-          </div>
-      </fieldset>
-  
-  
-      <!-- Field type: "short" id: "1734208916" -->
-      <fieldset>
-          <legend for="1734208916" class="text-white">SPM ID</legend>
-          <div class="form-group">
-              <input id="636028452" type="text" name="entry.636028452" class="form-control" required>
-          </div>
-      </fieldset>
-  
-      <input type="hidden" name="fvv" value="1">
-      <input type="hidden" name="fbzx" value="-2443980130054265806">
-      <!--
-          CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
-          This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
-          Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
-          We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
-      -->
-      <input type="hidden" name="pageHistory" value="0">
-  
-      <input class="btn btn-primary pt-3" style="width: 100%;" type="submit" value="Login">
-  </form>
-</section>
-</section>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
-  <script>
-  $('#bootstrapForm').submit(function (event) {
-      event.preventDefault()
-      var extraData = {}
-      $('#bootstrapForm').ajaxSubmit({
-          data: extraData,
-          dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
-          error: function () {
-              // Submit of form should be successful but JSONP callback will fail because Google Forms
-              // does not support it, so this is handled as a failure.
-              //alert('Form Submitted. Thanks.')
-              // You can also redirect the user to a custom thank-you page:
-              window.location = 'https://aatishgnair.github.io/10gspectrumregister/home.html'
-          }
-      })
-  })
-</script>
 
+    <section>
+        <!-- Image and text -->
+<nav class="navbar navbar-light bg-dark ">
+    <a class="navbar-brand" href="#" style="height: 100px; padding-left: 135px;">
+      <img src="images\logo o.png" width="137" height="137" class="d-inline-block align-top" alt="">
+      </a>
+    <h3 class="text-white" style="padding-left: 20px; ">WELCOME ! HAVE A GREAT DAY</h3>
+  </nav>
+    </section>
+    <section class="pt-3">
+    <div>
+        <a href="newregistration.html">
+        <button  type="button" class="btn btn-primary" style="width: 100%; height: 100px;">NEW CLIENT REGISTRATION</button>
+    </a>
+    </div>
+    <div class="pt-3">
+        <a href="renewal.html">
+            <button type="button" class="btn btn-success" style="width: 100%; height: 100px;">RENEWAL</button>
+    </a>
+    </div>
+    <div class="pt-3">
+        <a href="#">
+            <button type="button" class="btn btn-info" style="width: 100%; height: 100px;">EDU-DIGITAL PROGRAM</button>
+    </a>
+    </div>
+    <div class="pt-3">
+        <a href="feedback.html">
+            <button type="button" class="btn btn-secondary" style="width: 100%; height: 100px;">FEEDBACK</button>
+    </a>
+    </div>
+</section>
     
 
 
